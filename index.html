@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-
-        <a href="">Coffee</a>
-         <input type="checkbox" id="sidebar-toggle">
-         <label for="sidebar-toggle" id="overlay"></label>
-        <label for="sidebar-toggle" class="open">
-            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-        </label>
-        
-        <div class="menu">
-            <label for="sidebar-toggle" class="close">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            </label>
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-            <a href="">Location</a>
-        </div>
-    </nav>
+  
 
     <div class="card">
         <div class="card-1">
         <h1>Coffee</h1>
         <div class="input">
-            <p>Gmail:<input type="text"  id=""></p>
-            <p>Password:<input type="text"  id=""></p>
-            <div class="card-2">
-                <a href="">Log In</a>
-            </div>
+            <p>Gmail:<input type="text"  placeholder="Enter Your Gmail:"></p>
+            <p>Password:<input type="password" placeholder="Enter Your Password:" ></p>
+           <div class="card-2">
+  <a href="login.html" class="delayed-link">Log In</a>
+</div>
+
+<script>
+ 
+  const links = document.querySelectorAll('.delayed-link');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const href = this.href;
+
+     
+      this.textContent = "Loading...";
+
+      setTimeout(() => {
+        window.location.href = href; 
+      }, 5000); 
+     });
+    });
+        </script>
+
         </div>
         </div>
     </div>
