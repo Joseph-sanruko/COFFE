@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('ChatGPT Image Nov 29, 2025, 06_53_24 PM.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid black;
+    box-shadow: -10px 0 10px ;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+nav a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+    padding: 10px;
+    
+}
+.card-1{
+    background-color: rgba(255, 255, 255, 0.144);
+    padding: 50px;
+    box-shadow: 0px 2px 2px 2px;
+    border-radius: 10px;
+}
+.card-1 h1{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    font-size: 50px;
+}
+.input a{
+    font-size: larger;
+}
+.input input{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.274);
+    border: solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+.input p{
+    font-size: larger;
+}
+.card-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.card-2 a{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.692);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: medium;
+}
+#sidebar-toggle{
+    display: none;
+}
+.open, .close{
+    display: none;
+}
+@media(max-width: 425px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        padding-top: 20px;
+
+        background-color: rgb(0, 0, 0);
+        box-shadow: -5px 0 5px;
+        transition: 0.76s ease-out;
+    }
+    .open, .close{
+    display: block;
+}
+#sidebar-toggle:checked ~ .menu{
+    right: 0;
+}
+#sidebar-toggle:checked ~ #overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 5;
+}
+.menu{
+    z-index: 10;
+}
+}
